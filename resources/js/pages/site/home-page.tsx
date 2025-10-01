@@ -82,12 +82,12 @@ const HomePage: React.FC<HomePageProps> = ({ page, heroSlides, services, teams, 
                         {/* You can adjust opacity with /30, /40, /70 etc. */}
 
                         {/* Content */}
-                        <div className="mx-auto mt-16 flex w-6xl items-center bg-card/80 backdrop-saturate-150">
+                        <div className="mx-auto mt-16 flex w-6xl flex-col items-center bg-black/30 backdrop-saturate-150 md:flex-row">
                             <div className="md:w-9xl z-10 w-full px-6 py-10 text-left md:px-28">
-                                <h1 className="text-4xl font-semibold text-card-foreground md:text-5xl">
+                                <h1 className="text-4xl font-semibold text-gray-200 md:text-5xl">
                                     <span className="text-2xl md:text-7xl">{page.sections[0]?.heading}</span>
                                 </h1>
-                                <p className="mt-6 text-sm leading-relaxed text-card-foreground md:text-lg">{page.sections[0]?.sub_heading}</p>
+                                <p className="mt-6 text-sm leading-relaxed text-gray-400 md:text-lg">{page.sections[0]?.sub_heading}</p>
                                 <div className="mt-16">
                                     <Link href={page.sections[0]?.button_link || ''}>
                                         <button className="flex items-center gap-3 rounded-xl bg-primary px-6 py-2 font-semibold uppercase shadow-md hover:bg-yellow-500 hover:shadow-lg">
@@ -96,7 +96,7 @@ const HomePage: React.FC<HomePageProps> = ({ page, heroSlides, services, teams, 
                                     </Link>
                                 </div>
                             </div>
-                            <img src="/images/bird.gif" alt="Hero Image" className="z-20 h-96 w-96 object-cover" />
+                            <img src="/images/bird.gif" alt="Hero Image" className="z-20 h-64 w-64 object-cover md:h-96 md:w-96" />
                         </div>
                     </div>
                 </section>

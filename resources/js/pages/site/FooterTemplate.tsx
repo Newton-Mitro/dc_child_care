@@ -6,10 +6,10 @@ function FooterTemplate() {
     const { settings, auth } = usePage().props as any;
 
     return (
-        <footer className="relative bg-card/80 text-card-foreground backdrop-blur-md">
+        <footer className="relative bg-card/80 text-card-foreground backdrop-blur-md dark:bg-card/80">
             {/* Wave background */}
             <div className="absolute inset-0 -z-10">
-                <img src="/images/footerwave.svg" alt="Footer Wave" className="h-full w-full object-cover opacity-10" />
+                <img src="/images/footerwave.svg" alt="Footer Wave" className="h-full w-full object-cover opacity-40 dark:opacity-20" />
             </div>
 
             <div className="container mx-auto flex flex-col items-center justify-center px-4 py-16">

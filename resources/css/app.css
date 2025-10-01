@@ -59,7 +59,7 @@
 }
 :root {
     /* Backgrounds & surfaces */
-    --background: oklch(96% 0.05 100); /* pastel sky blue */
+    --background: oklch(97.663% 0.01972 100.636); /* pastel sky blue */
     --foreground: oklch(0.25 0.05 270); /* deep navy text */
     --card: oklch(98% 0.04 110); /* light mint */
     --card-foreground: var(--foreground);

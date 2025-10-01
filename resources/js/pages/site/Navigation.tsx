@@ -88,10 +88,13 @@ export default function Navigation() {
             {/* Desktop & Mobile Banner */}
             <div
                 className={`absolute flex w-full items-center justify-center transition-all duration-300 ${
-                    scrolled ? 'h-16 bg-card/80 backdrop-blur-md md:h-20' : 'h-32 bg-[url(/images/bannerwave.svg)] md:h-40'
+                    scrolled ? 'h-16 bg-card/80 backdrop-blur-md md:h-20' : 'h-32 md:h-48'
                 }`}
             >
-                <div className="mx-auto flex w-7xl justify-between rounded-2xl px-4 py-2">
+                <div
+                    className={`absolute inset-0 bg-[url(/images/bannerwave.svg)] ${scrolled ? 'opacity-30 dark:opacity-10' : 'opacity-60 dark:opacity-30'}`}
+                ></div>
+                <div className="z-30 mx-auto flex w-7xl justify-between rounded-2xl px-4 py-2">
                     {/* Logo */}
                     <div className="flex items-center justify-center">
                         <div className="flex items-center justify-center rounded-full bg-white p-1 transition-all duration-300 md:mr-4">
