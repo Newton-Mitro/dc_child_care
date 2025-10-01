@@ -17,7 +17,7 @@ const PageBanner: React.FC<PageBannerProps> = ({
     breadcrumbs = [],
 }) => {
     return (
-        <section className="relative bg-black/30 pt-28 pb-16 text-secondary-foreground">
+        <section className="relative bg-black/30 pt-32 pb-10 text-secondary-foreground">
             <div className="mx-auto max-w-4xl px-4 text-center">
                 <div className="mx-auto h-28 w-28 object-cover">
                     <img src="/images/emu.gif" alt="DC Child Care and Education Centre Logo" className="translate-y-8" />
@@ -47,9 +47,6 @@ const PageBanner: React.FC<PageBannerProps> = ({
                 <h1 className="mb-2 text-4xl font-bold text-foreground md:text-5xl">{title}</h1>
                 <p className="text-lg text-muted-foreground opacity-90 md:text-xl">{subtitle}</p>
             </div>
-            {/* <div className="absolute inset-0">
-                <img src="/images/footerwave.svg" alt="Footer Wave" className="object-cover w-full h-full opacity-10" />
-            </div> */}
         </section>
     );
 };
