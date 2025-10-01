@@ -1,0 +1,257 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+@plugin "tailwindcss-animate";
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --font-sans:
+        'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --radius-lg: var(--radius);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-sm: calc(var(--radius) - 4px);
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+}
+:root {
+    /* Backgrounds & surfaces */
+    --background: oklch(96% 0.05 100); /* pastel sky blue */
+    --foreground: oklch(0.25 0.05 270); /* deep navy text */
+    --card: oklch(98% 0.04 110); /* light mint */
+    --card-foreground: var(--foreground);
+    --popover: var(--card);
+    --popover-foreground: var(--foreground);
+
+    /* Primary & accent colors */
+    --primary: oklch(0.68 0.25 280); /* playful purple */
+    --primary-foreground: oklch(0.98 0.02 260); /* near white */
+    --secondary: oklch(0.78 0.2 145); /* cheerful green */
+    --secondary-foreground: var(--foreground);
+    --muted: oklch(0.9 0.05 90); /* soft yellow */
+    --muted-foreground: oklch(0.35 0.03 230);
+    --accent: oklch(0.72 0.22 25); /* bright orange */
+    --accent-foreground: var(--foreground);
+
+    /* Destructive / warnings */
+    --destructive: oklch(0.65 0.25 30); /* warm red */
+    --destructive-foreground: oklch(0.2 0.1 30);
+
+    /* Borders / inputs / rings */
+    --border: oklch(0.88 0.03 200);
+    --input: oklch(0.88 0.03 200);
+    --ring: oklch(0.7 0.2 280); /* purple ring */
+
+    /* Charts (rainbow-like) */
+    --chart-1: oklch(0.7 0.25 260); /* violet */
+    --chart-2: oklch(0.75 0.22 145); /* green */
+    --chart-3: oklch(0.85 0.18 90); /* yellow */
+    --chart-4: oklch(0.75 0.25 25); /* orange */
+    --chart-5: oklch(0.68 0.25 15); /* red */
+
+    /* Sidebar */
+    --sidebar: var(--card);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
+}
+
+.dark {
+    /* Backgrounds & surfaces */
+    --background: oklch(25% 0.05 260); /* deep purple/blue night */
+    --foreground: oklch(0.95 0.05 100); /* light cream */
+    --card: oklch(30% 0.05 240);
+    --card-foreground: var(--foreground);
+    --popover: var(--card);
+    --popover-foreground: var(--foreground);
+
+    /* Primary & accent colors */
+    --primary: oklch(0.65 0.25 280);
+    --primary-foreground: var(--foreground);
+    --secondary: oklch(0.55 0.18 145);
+    --secondary-foreground: var(--foreground);
+    --muted: oklch(0.35 0.05 250);
+    --muted-foreground: oklch(0.8 0.05 95);
+    --accent: oklch(0.6 0.2 25);
+    --accent-foreground: var(--foreground);
+
+    /* Destructive */
+    --destructive: oklch(0.5 0.22 30);
+    --destructive-foreground: oklch(0.9 0.05 30);
+
+    /* Borders / inputs / rings */
+    --border: oklch(0.35 0.05 250);
+    --input: var(--border);
+    --ring: oklch(0.65 0.22 280);
+
+    /* Charts */
+    --chart-1: oklch(0.65 0.25 260);
+    --chart-2: oklch(0.7 0.22 145);
+    --chart-3: oklch(0.75 0.18 90);
+    --chart-4: oklch(0.7 0.25 25);
+    --chart-5: oklch(0.68 0.25 15);
+
+    /* Sidebar */
+    --sidebar: var(--card);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    /* background: var(--background); */
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    /* background: var(--accent); */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ring);
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    .ck-content h1,
+    .ck-content h2,
+    .ck-content h3,
+    .ck-content h4,
+    .ck-content h5,
+    .ck-content h6 {
+        color: var(--color-foreground);
+        font-weight: 600;
+    }
+
+    .ck-content p {
+        color: var(--color-muted-foreground);
+    }
+
+    strong {
+        color: var(--color-muted-foreground) !important;
+    }
+
+    .ck-content ul,
+    .ck-content ol {
+        color: var(--color-muted-foreground);
+        list-style: disc;
+        padding-left: 1.5rem;
+    }
+
+    .ck-sticky-panel__content {
+        border-color: var(--border) !important;
+        border-radius: 10px 10px 0 0 !important;
+    }
+
+    .ck-button {
+        color: var(--foreground) !important;
+    }
+
+    .ck-button:hover {
+        color: var(--background) !important;
+    }
+
+    .ck-on {
+        color: var(--background) !important;
+    }
+
+    .ck-toolbar {
+        background-color: var(--background) !important;
+        border-color: var(--border) !important;
+        color: var(--foreground) !important;
+        border-radius: 10px 10px 0 0 !important;
+    }
+
+    .ck-editor__main > .ck-content {
+        min-height: 100px;
+        background-color: var(--background) !important;
+        border-color: var(--border) !important;
+        color: var(--foreground) !important;
+        border-radius: 0 0 10px 10px !important;
+
+        transition:
+            color 0.2s,
+            box-shadow 0.2s,
+            border-color 0.2s;
+    }
+
+    /* Focus state */
+    .ck.ck-focused {
+        border-color: var(--ring) !important;
+        box-shadow: 0 0 0 3px color-mix(in oklab, var(--ring) 50%, transparent);
+        outline: none !important;
+    }
+
+    /* Hide native datepicker icon in most browsers */
+    input[type='date']::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
+    }
+    input[type='date']::-webkit-inner-spin-button,
+    input[type='date']::-webkit-clear-button {
+        display: none;
+    }
+}
