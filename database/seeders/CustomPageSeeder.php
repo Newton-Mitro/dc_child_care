@@ -45,25 +45,19 @@ class CustomPageSeeder extends Seeder
             ],
             'Mission & Vision' => [
                 [
-                    'heading' => 'Our Mission & Vision',
-                    'sub_heading' => 'Guiding every child to thrive.',
                     'content_type' => 'TEXT',
                     'content' => 'Our mission is to provide a safe, nurturing, and stimulating environment that promotes holistic development. We envision a community where children grow with curiosity, confidence, and compassion.',
                 ]
             ],
             'Our Story' => [
                 [
-                    'heading' => 'Our Story',
-                    'sub_heading' => 'Guiding Little Steps to Big Dreams.',
                     'content_type' => 'HTML',
-                    'content' => '<section id="our-story" class="bg-background text-foreground"><div class="container mx-auto px-4 max-w-6xl text-center"><p class="text-lg mb-4">At Dhaka Credit Child Care and Education Center, we are dedicated to fostering a nurturing and inclusive environment where every child feels secure, respected, and inspired to explore their full potential.</p><p class="text-lg mb-4">We recognize that each child is unique, and we collaborate closely with parents to tailor our programs to support curiosity, creativity, and meaningful social connections.</p><p class="text-lg">Our mission is to provide a creative environment conducive to the optimal growth and holistic development of children. We prioritize safety, health, and positivity, ensuring that our space is a place where children can thrive emotionally, socially, and academically.</p></div></section>',
+                    'content' => '<section id="our-story" class="bg-background text-foreground"><div class="container max-w-6xl px-4 mx-auto"><p class="mb-4 text-lg">At Dhaka Credit Child Care and Education Center, we are dedicated to fostering a nurturing and inclusive environment where every child feels secure, respected, and inspired to explore their full potential.</p><p class="mb-4 text-lg">We recognize that each child is unique, and we collaborate closely with parents to tailor our programs to support curiosity, creativity, and meaningful social connections.</p><p class="text-lg">Our mission is to provide a creative environment conducive to the optimal growth and holistic development of children. We prioritize safety, health, and positivity, ensuring that our space is a place where children can thrive emotionally, socially, and academically.</p></div></section>',
 
                 ]
             ],
             'Our Philosophy' => [
                 [
-                    'heading' => 'Our Philosophy',
-                    'sub_heading' => 'Learning through love and play.',
                     'content_type' => 'TEXT',
                     'content' => 'We believe that children learn best when they feel loved and supported. Our programs emphasize hands-on learning, creativity, social-emotional growth, and respect for each child’s individuality.',
                 ]
@@ -158,16 +152,12 @@ class CustomPageSeeder extends Seeder
             // Parent Resources
             'Enrollment' => [
                 [
-                    'heading' => 'Enrollment',
-                    'sub_heading' => 'Join our community.',
                     'content_type' => 'TEXT',
                     'content' => 'Enrollment is open year-round. We provide guidance on registration, necessary forms, and program selection to ensure a smooth start for your child.',
                 ]
             ],
             'Curriculum' => [
                 [
-                    'heading' => 'Our Curriculum',
-                    'sub_heading' => 'Learning designed for growth.',
                     'content_type' => 'TEXT',
                     'content' => 'Our curriculum integrates academics, creativity, and social-emotional development. We follow evidence-based methods to inspire curiosity and confidence in every child.',
                 ]
@@ -175,8 +165,6 @@ class CustomPageSeeder extends Seeder
             'Rules & Regulations' => [],
             'Health & Safety' => [
                 [
-                    'heading' => 'Health & Safety',
-                    'sub_heading' => 'A safe environment for every child.',
                     'content_type' => 'TEXT',
                     'content' => 'We prioritize health and safety with trained staff, hygienic facilities, and emergency preparedness. Parents can rest assured that their children are in caring, safe hands.',
                 ]

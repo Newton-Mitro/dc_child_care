@@ -1,4 +1,6 @@
 function SectionHeader({ heading, sub_heading }) {
+    if (!heading && !sub_heading) return null; // nothing to render
+
     return (
         <div className="mb-6 flex flex-col items-center justify-center text-center">
             {heading && <h2 className="mb-1 text-3xl font-semibold">{heading}</h2>}
