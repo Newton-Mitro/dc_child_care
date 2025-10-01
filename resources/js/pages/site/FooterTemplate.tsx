@@ -1,4 +1,4 @@
-import { usePage } from '@inertiajs/react';
+import { Link, usePage } from '@inertiajs/react';
 
 function FooterTemplate() {
     const appName = import.meta.env.VITE_APP_NAME || 'DcChildCare';
@@ -14,7 +14,7 @@ function FooterTemplate() {
 
             <div className="container mx-auto flex flex-col items-center justify-center px-4 py-16">
                 {/* Logo & App Name */}
-                <div className="mb-6 flex flex-col items-center">
+                <div className="mb-3 flex flex-col items-center">
                     <div className="rounded-full bg-white p-3">
                         <img
                             src={settings.site_logo || '/logo.png'}
@@ -26,7 +26,7 @@ function FooterTemplate() {
                 </div>
 
                 {/* Contact Info */}
-                <div className="flex flex-col items-center space-y-2 text-center">
+                <div className="flex flex-col items-center space-y-1 text-center">
                     <p className="flex items-center gap-2">
                         <i className="fa-solid fa-location-dot text-accent"></i>
                         {settings.contact_address || 'Dhaka, Bangladesh'}
@@ -52,7 +52,7 @@ function FooterTemplate() {
                 </div>
 
                 {/* Social Links (optional) */}
-                <div className="mt-6 flex gap-4">
+                <div className="mt-4 flex gap-4">
                     <a href="#" className="transition-colors hover:text-accent-foreground">
                         <i className="fa-brands fa-facebook-f"></i>
                     </a>
@@ -68,12 +68,18 @@ function FooterTemplate() {
                 </div>
 
                 {/* Footer Note */}
-                <p className="mt-8 text-center text-sm text-muted-foreground">
+                <p className="mt-4 text-center text-sm text-muted-foreground">
                     &copy; {currentYear} {settings.site_name || appName}. All rights reserved. <br />
-                    Developed by{' '}
-                    <span className="font-bold text-accent-foreground">
-                        DC Quantum Labs <i className="fa-solid fa-rocket"></i>
-                    </span>
+                    Webadmin{' '}
+                    {auth.user ? (
+                        <span className="font-bold text-accent-foreground">
+                            <Link href={route('dashboard')}>Panel</Link>
+                        </span>
+                    ) : (
+                        <span className="font-bold text-accent-foreground">
+                            <a href="/login">Login</a>
+                        </span>
+                    )}
                 </p>
             </div>
         </footer>
